@@ -10,6 +10,19 @@ root.render(
   <React.StrictMode>
     <App />
     <Weather />
+    <div>
+      <p>
+        Open Source code by Marie-Josée Dubé on;
+        <a
+          href="https://github.com/MarieJosee13/react-weather"
+          rel="noreferrer"
+          target="_blank"
+        >
+          GitHub
+        </a>
+        .
+      </p>
+    </div>
   </React.StrictMode>
 );
 
