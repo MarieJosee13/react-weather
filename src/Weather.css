@@ -1,0 +1,35 @@
+.Weather {
+  border: 1px solid #000;
+  max-width: 700px;
+  margin: 50px 0 0 50px;
+  padding: 20px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+input {
+  border-radius: 5px;
+  padding: 7px 20px;
+}
+
+h1 {
+  font-size: 55px;
+}
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.Description {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-bottom: 30px;
+}
+.Weather li {
+  list-style: none;
+  font-size: 20px;
+}
+.FiveDay {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
