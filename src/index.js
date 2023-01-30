@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-    <Weather />
+    <Weather defaultCity="Vancouver" />
     <div>
       <p>
         Open Source code by Marie-Josée Dubé on;
