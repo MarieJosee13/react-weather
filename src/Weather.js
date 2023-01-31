@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -11,7 +11,7 @@ export default function Weather(props) {
       ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
-      date: "Wednesday 07:00AM",
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       iconUrl: `http://openweathermap.org/img/wn/${icon}@2x.png`,
       wind: response.data.wind.speed,
@@ -35,73 +35,8 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <div className="Header">
-          <h1>{weatherData.city}</h1>
-          <FormattedDate date={weatherData.date} />
-        </div>
-        <div className="row Description">
-          <div className="col-2">
-            <img
-              src={weatherData.iconUrl}
-              alt={weatherData.description}
-              width="150"
-            />
-          </div>
-          <div className="col-2">
-            <h3>{Math.round(weatherData.temperature)}°C</h3>
-          </div>
-          <div className="col-8">
-            <ul>
-              <li>{weatherData.description}</li>
-              <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {Math.round(weatherData.wind)}km/h</li>
-            </ul>
-          </div>
-        </div>
-        <div className="row FiveDay">
-          <div className="col-3">
-            <p>
-              9°C <br />
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/3313/3313908.png"
-                alt=""
-                width="35"
-              />
-            </p>
-          </div>
-          <div className="col-3">
-            <p>
-              6°C <br />
-              <img
-                src="https://cdn1.iconfinder.com/data/icons/weather-forecast-meteorology-color-1/128/weather-partly-cloudy-512.png"
-                alt=""
-                width="30"
-              />
-            </p>
-          </div>
-          <div className="col-3">
-            <p>
-              5°C
-              <br />
-              <img
-                src={weatherData.iconUrl}
-                alt={weatherData.description}
-                width="30"
-              />
-            </p>
-          </div>
-          <div className="col-3 ">
-            <p>
-              7°C
-              <br />
-              <img
-                src="https://cdn1.iconfinder.com/data/icons/weather-forecast-meteorology-color-1/128/weather-partly-cloudy-512.png"
-                alt=""
-                width="30"
-              />
-            </p>
-          </div>
-        </div>
+
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
