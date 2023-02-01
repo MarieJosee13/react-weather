@@ -28,9 +28,6 @@ body {
   font-size: 55px;
 }
 
-.Weather .Description {
-  padding-bottom: 30px;
-}
 .Weather li {
   list-style: none;
 }

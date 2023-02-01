@@ -1,0 +1,13 @@
+.WeatherInfo h1 {
+  font-size: 52px;
+  padding-top: 20px;
+  padding-bottom: 0;
+  line-height: 30px;
+  font-weight: lighter;
+}
+.WeatherInfo .MainIcon {
+  width: 125px;
+  position: relative;
+  top: -22px;
+  padding-top: 10px;
+}
