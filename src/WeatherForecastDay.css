@@ -5,3 +5,6 @@
   border: none;
   padding-right: 50px;
 }
+.LongRangeForecast canvas {
+  text-align: center;
+}
