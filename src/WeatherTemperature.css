@@ -3,6 +3,20 @@
   padding-top: 15px;
   line-height: 95px;
 }
+.WeatherTemperature a {
+  text-decoration: none;
+  color: black;
+}
+.WeatherTemperature a:visited {
+  text-decoration: none;
+}
+.WeatherTemperature a:link {
+  text-decoration: none;
+}
+.WeatherTemperature a:active {
+  text-decoration: none;
+}
+
 .WeatherTemperature .unit {
   position: relative;
   top: -22px;
