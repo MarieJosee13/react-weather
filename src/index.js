@@ -13,11 +13,12 @@ root.render(
     <Weather defaultCity="Vancouver" />
     <div>
       <p>
-        Open Source code by Marie-Josée Dubé on;
+        Open Source code by Marie-Josée Dubé on{" "}
         <a
           href="https://github.com/MarieJosee13/react-weather"
           rel="noreferrer"
           target="_blank"
+          className="openSource"
         >
           GitHub
         </a>
